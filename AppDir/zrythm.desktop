@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Zrythm
+GenericName=Digital Audio Workstation
+Comment=highly automated and intuitive digital audio workstation
+Keywords=daw;audio;midi;music;
+Exec=zrythm %f
+Icon=org.zrythm.Zrythm
+Type=Application
+StartupNotify=true
+Categories=AudioVideoEditing;Recorder;Music;AudioVideo;Audio;Sequencer;X-Sound;Midi;X-Jack;
+MimeType=application/x-zrythm-project;
+StartupWMClass=zrythm
