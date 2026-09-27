@@ -1,0 +1,36 @@
+diff --git a/modules/juce_graphics/juce_graphics.cpp b/modules/juce_graphics/juce_graphics.cpp
+index 94db10d..4a3354d 100644
+--- a/modules/juce_graphics/juce_graphics.cpp
++++ b/modules/juce_graphics/juce_graphics.cpp
+@@ -143,7 +143,7 @@
+ #endif
+ 
+ #if JUCE_USE_FREETYPE
+- #include <juce_graphics/fonts/harfbuzz/hb-ft.h>
++ #include <harfbuzz/hb-ft.h>
+ #endif
+ 
+ #if JUCE_WINDOWS
+@@ -152,7 +152,7 @@
+  #include <juce_graphics/fonts/harfbuzz/hb-coretext.h>
+ #endif
+ 
+-#include <juce_graphics/fonts/harfbuzz/hb-ot.h>
++#include <harfbuzz/hb-ot.h>
+ 
+ extern "C"
+ {
+diff --git a/modules/juce_graphics/juce_graphics_Harfbuzz.cpp b/modules/juce_graphics/juce_graphics_Harfbuzz.cpp
+index f76e4e3..c32468e 100644
+--- a/modules/juce_graphics/juce_graphics_Harfbuzz.cpp
++++ b/modules/juce_graphics/juce_graphics_Harfbuzz.cpp
+@@ -91,8 +91,7 @@ JUCE_BEGIN_IGNORE_DEPRECATION_WARNINGS
+ #endif
+ 
+ #include <utility>
+-#include <juce_graphics/fonts/harfbuzz/hb.hh>
+-#include <juce_graphics/fonts/harfbuzz/harfbuzz.cc>
++// Zrythm links the shared HarfBuzz, so the bundled implementation is not compiled here.
+ 
+ #undef HAVE_DIRECTWRITE
+ #undef HAVE_FREETYPE
